@@ -1,1 +1,21 @@
-<p>commande-panier works!</p>
+<h4>Voici votre commande!</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Plat</th>
+            <th>Boisson</th>
+            <th>Actions :</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(menu of panier(); track $index){
+            <tr>
+                <td>{{menu.plat}}</td>
+                <td>{{menu.drink}}</td>
+                <td>
+                    <button (click)="onClickSupprimer(menu)">Supprimer!</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

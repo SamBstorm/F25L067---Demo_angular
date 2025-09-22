@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { IMenu } from '../../../../core/models/imenu';
 
 @Component({
   selector: 'app-commande-panier',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './commande-panier.scss'
 })
 export class CommandePanier {
+  public panier : InputSignal<IMenu[]> = input.required<IMenu[]>();
+  public onMenuChoosen : OutputEmitterRef<IMenu> = output<IMenu>();
 
+  public onClickSupprimer(menu : IMenu) : void{
+    this.onMenuChoosen.emit(menu);
+  }
 }

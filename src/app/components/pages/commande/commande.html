@@ -8,6 +8,5 @@
 
 <div style="border : red 3px dotted">
     <h3>Ceci est le composant CommandePanier</h3>
-    <app-commande-panier></app-commande-panier>
-    <p>{{panier | json}}</p>
+    <app-commande-panier [panier]="panier" (onMenuChoosen)="onRemoveMenuChoose($event)"></app-commande-panier>
 </div>
