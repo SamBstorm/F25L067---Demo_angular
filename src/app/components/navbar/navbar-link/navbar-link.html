@@ -1,0 +1,15 @@
+<li>
+    @if(link().url){
+        <a [routerLink]="link().url">
+            {{link().text}}
+        </a>
+    }
+    @else {
+        {{link().text}}
+    }
+    <ul>
+        @for(child of link().navbarChildren; track $index){
+            <app-navbar-link [link]="child"></app-navbar-link>
+        }
+    </ul>
+</li>

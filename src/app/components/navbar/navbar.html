@@ -1,7 +1,7 @@
 <nav>
     <ul>
         @for(item of items; track $index){
-            <li>{{item.text}}</li>
+            <app-navbar-link [link]="item"></app-navbar-link>
         }
     </ul>
 </nav>
