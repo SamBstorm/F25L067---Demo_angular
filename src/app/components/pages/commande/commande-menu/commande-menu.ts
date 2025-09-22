@@ -1,5 +1,6 @@
-import { Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IMenu } from '../../../../core/models/imenu';
+import { MenuResto } from '../../../../core/services/menu-resto';
 
 @Component({
   selector: 'app-commande-menu',
@@ -8,11 +9,15 @@ import { IMenu } from '../../../../core/models/imenu';
   styleUrl: './commande-menu.scss'
 })
 export class CommandeMenu {
-  public menus : InputSignal<IMenu[]> = input.required<IMenu[]>();
-  public onMenuChoosen : OutputEmitterRef<IMenu> = output<IMenu>();
+
+  private _menuRestoService : MenuResto = inject(MenuResto);
+  public menus : IMenu[] = this._menuRestoService.menus;
+  
+  // constructor(private _menuRestoService : MenuResto){
+  //    this.menus = this._menuRestoService.menus;
+  // }
 
   public onClickAjouter(menu : IMenu) : void {
-    this.onMenuChoosen.emit(menu);
-    console.log(menu);
+    this._menuRestoService.ajouterMenu(menu);
   }
 }
