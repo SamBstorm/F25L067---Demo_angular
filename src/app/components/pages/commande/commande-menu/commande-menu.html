@@ -1,0 +1,21 @@
+<h4>Faîtes votre choix!</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Plat</th>
+            <th>Boisson</th>
+            <th>Actions :</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(menu of menus(); track $index){
+         <tr>
+            <td>{{menu.plat}}</td>
+            <td>{{menu.drink}}</td>
+            <td>
+                <button (click)="onClickAjouter(menu)">Ajouter!</button>
+            </td>
+         </tr>   
+        }
+    </tbody>
+</table>

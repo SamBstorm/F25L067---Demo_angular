@@ -1,0 +1,13 @@
+<h1>Démonstration 3</h1>
+<h2>Utilisation des services</h2>
+
+<div style="border : blue 3px dotted">
+    <h3>Ceci est le composant CommandeMenu</h3>
+    <app-commande-menu [menus]="menus" (onMenuChoosen)="onNewMenuChoose($event)"></app-commande-menu>
+</div>
+
+<div style="border : red 3px dotted">
+    <h3>Ceci est le composant CommandePanier</h3>
+    <app-commande-panier></app-commande-panier>
+    <p>{{panier | json}}</p>
+</div>
