@@ -31,6 +31,11 @@ export class Navbar {
             url : "/demo3",
             navbarChildren : []
           },
+          {
+            text : "Démonstration 4 - Service - Ticket",
+            url : "/demo4",
+            navbarChildren : []
+          },
         ]
       },
       {

@@ -1,0 +1,9 @@
+<h4>Voici votre ticket de caisse!</h4>
+<ul>
+    @for(menu of panier; track $index){
+        <li>
+            <p>{{menu.plat}}</p>
+            <p>{{menu.drink}}</p>
+        </li>
+    }
+</ul>
