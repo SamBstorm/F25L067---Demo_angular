@@ -1,0 +1,10 @@
+<h1>Démonstration 7</h1>
+<h2>RandomUserAPI</h2>
+<p>Voici un utilisateur aléatoire provenant d'une WebAPI :</p>
+
+@if(randomUser$){
+    <div>
+        <img [src]="randomUser$.url_pict"><br>
+        <a href="mailto:{{randomUser$.email}}">{{randomUser$.firstname}} {{randomUser$.lastname}}</a>
+    </div>
+}

@@ -46,6 +46,11 @@ export class Navbar {
             url : "/demo5chrono2",
             navbarChildren : []
           },
+          {
+            text : "Démonstration 7 - Service - API",
+            url : "/demo7",
+            navbarChildren : []
+          },
         ]
       },
       {
