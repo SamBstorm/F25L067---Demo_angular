@@ -36,6 +36,16 @@ export class Navbar {
             url : "/demo4",
             navbarChildren : []
           },
+          {
+            text : "Démonstration 5 - Service - Chrono1",
+            url : "/demo5chrono1",
+            navbarChildren : []
+          },
+          {
+            text : "Démonstration 5 - Service - Chrono2",
+            url : "/demo5chrono2",
+            navbarChildren : []
+          },
         ]
       },
       {
