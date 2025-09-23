@@ -7,3 +7,20 @@
     <button (click)="onClickStop()">Stop</button>
     <button (click)="onClickReset()">Reset</button>
 </div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date Sauvegarde</th>
+            <th>Chrono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(timeHist of timeHistory; track $index){
+            <tr>
+                <td>{{timeHist.date}}</td>
+                <td>{{timeHist.time}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
